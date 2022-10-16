@@ -14,4 +14,6 @@ app.get("/api/user/1", (req, res)=>{
     res.status(200).send("one User Fetch")
 });
 
-app.listen(4040, ()=>console.log("Server started"))
+const PORT = 4040 || process.env.PORT;
+
+app.listen(PORT, ()=>console.log("Server started"))
